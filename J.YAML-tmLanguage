@@ -1,0 +1,45 @@
+# [PackageDev] target_format: plist, ext: tmLanguage
+---
+name: J
+scopeName: source.j
+fileTypes: [ijs]
+uuid: da3b45a7-ebbd-4ce6-b1b4-8c7121e79238
+
+patterns:
+-  comment: copular
+   name: keyword.operator.j
+   match: =[\.:]
+
+-  comment: verb
+   name: keyword.other.j
+   match: =[^\.:]|<[\.:]?|>[\.:]?|\+[\.:]?|\*[\.:]?|-[\.:]?|%[\.:]?|\^[\.:]?|\$[\.:]?|~[\.:]|\|[\.:]?|,
+
+-  comment: comment
+   name: comment.line.j
+   match: NB\..*
+
+-  comment: control
+   name: keyword.control.j
+   match: assert\.|break\.|continue\.|for\.|do\.|end\.|goto_name\.|label_name\.|if\.|elseif\.|return\.|select\.|case\.|fcase\.|throw\.|try\.|catch\.|while\.|whilst\.
+
+-  comment: foreign
+   name: support.function.j
+   match: \d{1,3}!:\d{1,3}
+
+-  comment: constant
+   name: constant.language.j
+   match: a\.
+
+-  comment: numeric list
+   name: constant.numeric.j
+   match: \d
+
+-  comment: names
+   name: entity.name
+   match: \w+
+
+-  comment: string
+   name: string.quoted.single
+   match: \'\w*[^']*\'
+
+...
